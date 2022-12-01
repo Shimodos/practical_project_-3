@@ -42,8 +42,9 @@ export default class MainSlider extends Slider {
 
 
     render(){
-        try {
-            this. hanson = document.querySelector('.hanson');
+        try{
+            try {
+            this.hanson = document.querySelector('.hanson');
         } catch(e){}
         
         this.btns.forEach(item => {
@@ -59,5 +60,6 @@ export default class MainSlider extends Slider {
         });
 
         this.showSlides(this.slideIndex);
+        } catch(e){}
     }
 }

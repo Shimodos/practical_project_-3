@@ -16,6 +16,7 @@ export default class Form {
         });
     }
 
+
     chackMailInputs() {
         const mailInputs = document.querySelectorAll('[type="email"]');
 
@@ -49,7 +50,6 @@ export default class Form {
                 i =0,
                 def = matrix.replace(/\D/g, ''),
                 val = this.value.replace(/\D/g, '');
-                
             if (def.length >= val.length){
                 val = def;
             }
@@ -66,14 +66,13 @@ export default class Form {
                 }
             }
         }
-        
         let inputs = document.querySelectorAll('[name="phone"]');
 
         inputs.forEach(input => {
             input.addEventListener('input', createMask);
             input.addEventListener('focus', createMask);
             input.addEventListener('blur', createMask);
-        }); 
+        });
     }
 
     async postData(url, data) {
